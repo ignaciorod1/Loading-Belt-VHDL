@@ -1,0 +1,25 @@
+
+sw0 es el interruptor de la placa que pone en marcha el programa
+
+
+Epezamos een estado 0, reposo
+Todo parado.
+
+si flanco de subida de reloj entonces
+  SI sw0 está activado entonces
+    el estado actual pasa a ser el 1:
+    El estado 1 hace parpadear un led
+    esto pasa hasta que:
+      el final de carrera sea 0 Y  [se haya pulsado START O pasen 10 s]
+      de esta forma evitamos ponerlo en marcha si ya hay otra pieza en la cinta y
+      para condiciones de seguridad.
+    DESPUÉS
+    comienza a moverse la cinta hasta que se activa el final de carrera.
+    DESPUÉS pueden ocurrir 2 cosas dependiendo del tipo de producto:
+    esto lo determina un switch SW1
+    1-> SW1 = 0 - producto robot
+    se para la pieza, se enciende un led rojo, se envia un bit al robot
+    2-> SW1 = 1 - produco caja
+    se para la pieza, se enciende un led verde, se envia la pieza al final de la cinta
+
+    final
