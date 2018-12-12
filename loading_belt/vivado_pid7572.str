@@ -139,3 +139,90 @@ selectCodeEditor("loadingBelt.vhd", 42, 446); // ce (w, ck)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 299 seconds
+selectCodeEditor("loadingBelt.vhd", 304, 435); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("loadingBelt.vhd", 48, 460); // ce (w, ck)
+// [GUI Memory]: 85 MB (+936kb) [00:12:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 671 MB. GUI used memory: 38 MB. Current time: 12/12/18 10:51:40 AM CET
+// Elapsed time: 258 seconds
+selectCodeEditor("loadingBelt.vhd", 331, 428); // ce (w, ck)
+// Elapsed time: 45 seconds
+selectCodeEditor("loadingBelt.vhd", 85, 451); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 335, 451); // ce (w, ck)
+// Elapsed time: 41 seconds
+selectCodeEditor("loadingBelt.vhd", 49, 473); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("loadingBelt.vhd", 3, 482); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 160, 364); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 125, 399); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 181, 401); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 61, 419); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("loadingBelt.vhd", 51, 295); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("loadingBelt.vhd", 83, 279); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("loadingBelt.vhd", 84, 437); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("loadingBelt.vhd", 103, 414); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 92, 428); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 92, 432); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 1, 438); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 254, 415); // ce (w, ck)
+// Elapsed time: 84 seconds
+selectCodeEditor("loadingBelt.vhd", 223, 439); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 207, 433); // ce (w, ck)
+// Elapsed time: 277 seconds
+selectCodeEditor("loadingBelt.vhd", 305, 319); // ce (w, ck)
+// Elapsed time: 111 seconds
+selectCodeEditor("loadingBelt.vhd", 105, 336); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 227, 325); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("loadingBelt.vhd", 319, 139); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 210, 358); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 227, 339); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 217, 347); // ce (w, ck)
+// Elapsed time: 46 seconds
+selectCodeEditor("loadingBelt.vhd", 190, 369); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 293, 281); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("loadingBelt.vhd", 314, 434); // ce (w, ck)
+// Elapsed time: 103 seconds
+selectCodeEditor("loadingBelt.vhd", 299, 430); // ce (w, ck)
+// Elapsed time: 88 seconds
+selectCodeEditor("loadingBelt.vhd", 306, 428); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("loadingBelt.vhd", 122, 465); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 322, 440); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 320, 431); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 4, 448); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 1, 448); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 76, 477); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 240, 414); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("loadingBelt.vhd", 183, 450); // ce (w, ck)
+// [GUI Memory]: 89 MB (+435kb) [00:34:57]
+// Elapsed time: 147 seconds
+selectCodeEditor("loadingBelt.vhd", 253, 465); // ce (w, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("loadingBelt.vhd", 152, 420); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("loadingBelt.vhd", 280, 414); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
