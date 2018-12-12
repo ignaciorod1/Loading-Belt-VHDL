@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 12 10:18:57 2018
+# Process ID: 13720
+# Current directory: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5648 D:\Usuario\Documents\GitHub\Loading-Belt-VHDL\loading_belt\loading_belt.xpr
+# Log file: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/vivado.log
+# Journal file: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{D:/Usuario/Desktop/Universidad/9º Cuatrimestre/Sistemas Electrónicos Digitales/VHDL/digilent-xdc-master/Nexys-4-DDR-Master.xdc}}] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {{D:/Usuario/Desktop/Universidad/9º Cuatrimestre/Sistemas Electrónicos Digitales/VHDL/digilent-xdc-master/Nexys-4-DDR-Master.xdc}}
+add_files -fileset constrs_1 -norecurse D:/Usuario/Documents/digilent-xdc-master/digilent-xdc-master/Nexys-4-DDR-Master.xdc
+update_compile_order -fileset sources_1

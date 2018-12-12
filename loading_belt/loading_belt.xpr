@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr">
+<Project Version="7" Minor="38" Path="D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="98453087b8004fa0bbcdf6252eaaa45e"/>
@@ -21,6 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -75,7 +76,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../../../../Desktop/Universidad/9º Cuatrimestre/Sistemas Electrónicos Digitales/VHDL/digilent-xdc-master/Nexys-4-DDR-Master.xdc">
+      <File Path="$PPRDIR/../../../digilent-xdc-master/digilent-xdc-master/Nexys-4-DDR-Master.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
