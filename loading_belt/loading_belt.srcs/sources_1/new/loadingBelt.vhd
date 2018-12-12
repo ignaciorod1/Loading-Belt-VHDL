@@ -20,11 +20,14 @@ entity loadingBelt is
     P1: IN STD_LOGIC;
     P2: IN STD_LOGIC;
     ENSTOP: IN STD_LOGIC;
-    BITROBOT: OUT STD_LOGIC
+    BITROBOT: OUT STD_LOGIC;
+    LED: OUT STD_LOGIC;
+    CINTA: OUT STD_LOGIC
   );
 end loadingBelt;
 
 architecture Behavioral of loadingBelt is
+
 TYPE estados IS (S0, S1, S2, S3);
 SIGNAL state, nextstate: estados;
 SIGNAL SW0_SIGNAL: STD_LOGIC;
@@ -37,12 +40,45 @@ SYNC_PROC: PROCESS (CLK)
 BEGIN
 IF rising_edge(CLK) THEN
 IF (RESET = '1') THEN state <= S0;
-ELSE IF (SW0 = '1') THEN state <= nextstate;
-        nextstate <= S1;
-ELSE IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN
+ELSE state <= nextstate;
 END IF;
+END IF;
+END PROCESS;
 
 
- 
+OUTPUT_DECODE: PROCESS (state)
+BEGIN
+ CASE (state) is
+WHEN S1 => LED <= '1';
+WHEN S2 => CINTA <= '1';
+WHEN S3 => BITROBOT <='1';
+END CASE;
+END PROCESS;
 
+NEXT_STATE_DECODE: PROCESS (state, SW0, START, ENDSTOP, P1,P2)
+BEGIN
+nextstate <= S0;
+CASE (state) is
+WHEN S0 =>
+IF (SW0 = '1') THEN nextstate <= S1;
+END IF;
+WHEN S1 =>
+LED <= '1';
+IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN nextstate <= S2;
+END IF;
+WHEN S2 =>
+CINTA<= '1';
+-- bifurcacion
+IF ( P1 = '1' AND ENDSTOP = '1' AND nextstate = S2 AND  P2 = '0' ) THEN
+        nextstate <= S3;
+
+IF ( P1 = '0' AND ENDSTOP = '1' AND nextstate = S2 AND  P2 = '1' ) THEN
+        nextstate <= S1;
+END IF;
+END IF;
+WHEN S3 =>
+BITROBOT<='1';
+
+END CASE;
+END PROCESS;
 end Behavioral;

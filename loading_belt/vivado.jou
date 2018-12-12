@@ -13,3 +13,7 @@ start_gui
 open_project D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

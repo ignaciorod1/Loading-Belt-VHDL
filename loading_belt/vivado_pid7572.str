@@ -226,3 +226,263 @@ selectCodeEditor("loadingBelt.vhd", 280, 414); // ce (w, ck)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 97 seconds
+selectCodeEditor("loadingBelt.vhd", 282, 153); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 1, 143); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 361, 75); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("loadingBelt.vhd", 187, 463); // ce (w, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, loadingBelt.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, loadingBelt.vhd]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectCodeEditor("loadingBelt.vhd", 291, 307); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 75, 395); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 67, 402); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 39 MB. Current time: 12/12/18 11:21:40 AM CET
+// Elapsed time: 349 seconds
+selectCodeEditor("loadingBelt.vhd", 1, 395); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 175, 427); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 108, 448); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("loadingBelt.vhd", 246, 448); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 386, 450); // ce (w, ck)
+// Elapsed time: 31 seconds
+selectCodeEditor("loadingBelt.vhd", 158, 488); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 211, 483); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 0, 449); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 197, 483); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 182, 493); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 12, 469); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 1, 450); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 179, 487); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 119, 485); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 341, 482); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("loadingBelt.vhd", 215, 519); // ce (w, ck)
+// Elapsed time: 522 seconds
+selectCodeEditor("loadingBelt.vhd", 123, 466); // ce (w, ck)
+// Elapsed time: 70 seconds
+selectCodeEditor("loadingBelt.vhd", 148, 295); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("loadingBelt.vhd", 282, 210); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 203, 265); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 75, 231); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 9, 283); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 175, 326); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 226, 399); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+// [GUI Memory]: 98 MB (+4064kb) [00:59:11]
+selectCodeEditor("loadingBelt.vhd", 30, 293); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 35, 367); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 37, 436); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 33, 249); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 235, 196); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 251, 184); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 278, 379); // ce (w, ck)
+// [GUI Memory]: 103 MB (+723kb) [01:00:11]
+// Elapsed time: 111 seconds
+selectCodeEditor("loadingBelt.vhd", 219, 399); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("loadingBelt.vhd", 66, 277); // ce (w, ck)
+// Elapsed time: 118 seconds
+selectCodeEditor("loadingBelt.vhd", 158, 446); // ce (w, ck)
+// Elapsed time: 135 seconds
+selectCodeEditor("loadingBelt.vhd", 151, 453); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("loadingBelt.vhd", 45, 471); // ce (w, ck)
+// Elapsed time: 52 seconds
+selectCodeEditor("loadingBelt.vhd", 63, 183); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 2, 170); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 115, 461); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("loadingBelt.vhd", 157, 460); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 125, 449); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("loadingBelt.vhd", 207, 379); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("loadingBelt.vhd", 175, 403); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("loadingBelt.vhd", 149, 395); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 122, 410); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("loadingBelt.vhd", 79, 400); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 47, 402); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 129, 401); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 119, 395); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("loadingBelt.vhd", 77, 415); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 117, 415); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("loadingBelt.vhd", 186, 409); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 3, 419); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 54, 439); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 43 seconds
+selectCodeEditor("loadingBelt.vhd", 155, 421); // ce (w, ck)
+// [GUI Memory]: 109 MB (+377kb) [01:13:34]
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 39 MB. Current time: 12/12/18 11:51:40 AM CET
+// Elapsed time: 1447 seconds
+selectCodeEditor("loadingBelt.vhd", 60, 315); // ce (w, ck)
+// Elapsed time: 94 seconds
+selectCodeEditor("loadingBelt.vhd", 317, 81); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("loadingBelt.vhd", 90, 314); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("loadingBelt.vhd", 60, 251); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 65, 295); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 83, 368); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 65, 457); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 74, 407); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 60, 410); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 57, 419); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 4, 429); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 283 seconds
+selectCodeEditor("loadingBelt.vhd", 10, 250); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 33, 267); // ce (w, ck)
+// Elapsed time: 51 seconds
+selectCodeEditor("loadingBelt.vhd", 235, 260); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 50, 262); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 42, 263); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 180, 264); // ce (w, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("loadingBelt.vhd", 1, 128); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("loadingBelt.vhd", 91, 250); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 40, 304); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 30, 295); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 30, 252); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 14, 275); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 10, 267); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 49, 271); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 37, 275); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 251, 278); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 38 MB. Current time: 12/12/18 12:21:43 PM CET
+// Elapsed time: 36 seconds
+selectCodeEditor("loadingBelt.vhd", 399, 286); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("loadingBelt.vhd", 116, 291); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 52 seconds
+selectCodeEditor("loadingBelt.vhd", 115, 338); // ce (w, ck)
+typeControlKey((HResource) null, "loadingBelt.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 144, 366); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 99, 381); // ce (w, ck)
+// Elapsed time: 31 seconds
+selectCodeEditor("loadingBelt.vhd", 24, 426); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("loadingBelt.vhd", 174, 431); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 92 seconds
+selectCodeEditor("loadingBelt.vhd", 30, 321); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 37, 319); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 27 seconds
+selectCodeEditor("loadingBelt.vhd", 84, 320); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("loadingBelt.vhd", 20, 336); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 23, 329); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 75, 328); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("loadingBelt.vhd", 0, 362, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("loadingBelt.vhd", 76, 382); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("loadingBelt.vhd", 129, 439); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 301, 488); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("loadingBelt.vhd", 63, 509); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 63, 489); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 63, 453); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("loadingBelt.vhd", 45, 471); // ce (w, ck)
+// Elapsed time: 92 seconds
+selectCodeEditor("loadingBelt.vhd", 73, 467); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 42, 451); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 50 seconds
+selectCodeEditor("loadingBelt.vhd", 221, 57); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+selectCodeEditor("loadingBelt.vhd", 188, 279); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 253, 338); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 249, 352); // ce (w, ck)
+selectCodeEditor("loadingBelt.vhd", 249, 352, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("loadingBelt.vhd", 163, 278); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("loadingBelt.vhd", 135, 183); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
