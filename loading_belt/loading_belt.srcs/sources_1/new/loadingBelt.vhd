@@ -26,27 +26,23 @@ end loadingBelt;
 
 architecture Behavioral of loadingBelt is
 TYPE estados IS (S0, S1, S2, S3);
-
 SIGNAL state, nextstate: estados;
 SIGNAL SW0_SIGNAL: STD_LOGIC;
 SIGNAL BITROBOT_SIGNAL: STD_LOGIC;
 SIGNAL ENDSTOP: STD_LOGIC;
 SIGNAL P1_SIGNAL, P2_SIGNAL,START_SIGNAL: STD_LOGIC;
 SIGNAL reset_signal: STD_LOGIC;
-
-
+begin
+SYNC_PROC: PROCESS (CLK)
 BEGIN
-    SYNC_PROC: PROCESS (CLK)
-    BEGIN
-        IF rising_edge(CLK) THEN
-            IF (RESET = '1') THEN state <= S0;
-            ELSE IF (SW0 = '1') THEN state <= nextstate;
-                                     nextstate <= S1;
-            ELSE IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN
-               state <= nextstate;
-               nextstate <= S2;                   
-            END IF;
-        END IF;
---END PROCESS;
---END Behavioral;
+IF rising_edge(CLK) THEN
+IF (RESET = '1') THEN state <= S0;
+ELSE IF (SW0 = '1') THEN state <= nextstate;
+        nextstate <= S1;
+ELSE IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN
+END IF;
 
+
+ 
+
+end Behavioral;
