@@ -1,0 +1,7 @@
+
+*.log
+*.xdbg
+*.type
+loading_belt/loading_belt.sim/sim_1/behav/xsim/xsim.dir/loadingBelt_tb_behav/xsimk.exe
+*.pb
+*.wdb
