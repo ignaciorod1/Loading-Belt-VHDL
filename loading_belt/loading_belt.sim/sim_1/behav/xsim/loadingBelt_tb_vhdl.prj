@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../loading_belt.srcs/sim_1/new/loadingBelt_tb.vhd" \
+
+# Do not sort compile order
+nosort
