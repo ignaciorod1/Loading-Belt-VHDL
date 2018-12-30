@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="loadingBelt_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="loadingBelt_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
+      <Cursor1Time time="348449000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/loadingBelt_tb/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/nextstate" type="other">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/SW0" type="logic">
+      <obj_property name="ElementShortName">SW0</obj_property>
+      <obj_property name="ObjectShortName">SW0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/SW1" type="logic">
+      <obj_property name="ElementShortName">SW1</obj_property>
+      <obj_property name="ObjectShortName">SW1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/START" type="logic">
+      <obj_property name="ElementShortName">START</obj_property>
+      <obj_property name="ObjectShortName">START</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/ENDSTOP" type="logic">
+      <obj_property name="ElementShortName">ENDSTOP</obj_property>
+      <obj_property name="ObjectShortName">ENDSTOP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/LED" type="logic">
+      <obj_property name="ElementShortName">LED</obj_property>
+      <obj_property name="ObjectShortName">LED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/CINTA" type="logic">
+      <obj_property name="ElementShortName">CINTA</obj_property>
+      <obj_property name="ObjectShortName">CINTA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/loadingBelt_tb/BITROBOT" type="logic">
+      <obj_property name="ElementShortName">BITROBOT</obj_property>
+      <obj_property name="ObjectShortName">BITROBOT</obj_property>
+   </wvobject>
+</wave_config>
