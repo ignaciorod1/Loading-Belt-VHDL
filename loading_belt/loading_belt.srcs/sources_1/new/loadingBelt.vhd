@@ -5,28 +5,22 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity loadingBelt is
  Port (
     CLK: IN STD_LOGIC;
-    RESET: IN STD_LOGIC;
-    START: IN STD_LOGIC;
-    SW0: IN STD_LOGIC;
-    P1: IN STD_LOGIC;
-    P2: IN STD_LOGIC;
-    ENSTOP: IN STD_LOGIC;
-    BITROBOT: OUT STD_LOGIC;
-    LED: OUT STD_LOGIC;
-    CINTA: OUT STD_LOGIC
+    RESET: IN STD_LOGIC;        -- boton de la placa
+    START: IN STD_LOGIC;        -- boton de la placa
+    SW0: IN STD_LOGIC;  -- switch to start the belt
+    SW1: IN STD_LOGIC;  -- switch to choose the product
+    ENDSTOP: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
+    BITROBOT: OUT STD_LOGIC;    -- salida GPIO
+    LED: OUT STD_LOGIC;         -- led de placa
+    CINTA: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
   );
 end loadingBelt;
 
 architecture Behavioral of loadingBelt is
 
-TYPE estados IS (S0, S1, S2, S3);
+TYPE state_type IS (S0, S1, S2, S3);
 
-SIGNAL state, nextstate: estados;
-SIGNAL SW0_SIGNAL: STD_LOGIC;
-SIGNAL BITROBOT_SIGNAL: STD_LOGIC;
-SIGNAL ENDSTOP: STD_LOGIC;
-SIGNAL P1_SIGNAL, P2_SIGNAL,START_SIGNAL: STD_LOGIC;
-SIGNAL reset_signal: STD_LOGIC;
+SIGNAL state, nextstate: state_type;
 
 BEGIN
 
@@ -44,17 +38,24 @@ OUTPUT_DECODE: PROCESS (state)
 BEGIN
 
  CASE (state) is
-    WHEN S0 => LED <= '0';
-    WHEN S1 => LED <= '1';
+    WHEN S0 => LED <= '0';  -- FUTURE RED LED
+
+    WHEN S1 => LED <= '1';  --  FUTURE BLINK LED FUNCTION/ PROCEDURE
+
     WHEN S2 => CINTA <= '1';
+
     WHEN S3 => BITROBOT <='1';
+
  END CASE;
 
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, START, ENDSTOP, P1,P2)
+NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
 BEGIN
-    nextstate <= S0;
+    
+    IF SW0 = '0' THEN nextstate <= S0;
+    END IF;
+    
     CASE (state) is
 
         WHEN S0 =>
@@ -63,18 +64,22 @@ BEGIN
 
         WHEN S1 =>
             LED <= '1';
-            IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN nextstate <= S2;
+            IF ( rising_edge(START)) THEN
+                IF (ENDSTOP = '0' AND nextstate = S1 ) THEN -- start es con flanco de subida porque es un boton, no un pulsador.
+                     nextstate <= S2;
+            END IF;
             END IF;
 
         WHEN S2 =>
-            CINTA<= '1';
-            IF ( P1 = '1' AND ENDSTOP = '1' 
-                AND nextstate = S2 AND  P2 = '0' ) THEN nextstate <= S3;
-            END IF;
-
-            IF ( P1 = '0' AND ENDSTOP = '1' AND nextstate = S2 
-                AND  P2 = '1' ) THEN nextstate <= S1;
-            END IF;
+            CINTA <= '1';
+            IF (ENDSTOP = '1' AND nextstate = S2) THEN
+                CASE SW1 IS
+                    WHEN '1' => nextstate <= S3;    -- si SW1 esta en 1, la pieza se para y la recoge el robot (estado 3)
+                    WHEN OTHERS => nextstate <= S1; -- si SW1 esta en 0, la pieza continua hasta que llega al final de la cinta y cae a una caja
+                                                    -- para esto habria que suponer el tiempo que tarda en llegar al final (5 segundos (?)) y ...
+                                                    -- ... esto seria es estado 4.
+                END CASE;
+            END IF; 
 
         WHEN S3 =>  BITROBOT<='1';
 
@@ -82,3 +87,4 @@ BEGIN
 
 END PROCESS;
 end Behavioral;
+    
