@@ -54,9 +54,9 @@ SYNC_PROC: PROCESS (CLK)
         END IF;
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
-BEGIN
-    
+NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)    -- simula la evolucion de las entradas. No se pueden ver directamente como 
+begin                                                        -- se hace con las salidas porque son SIGNAL dentro del codigo, y no se pueden meter dentro del
+                                                        -- COMPONENT. Para simular su evolucion, esta en el testbench el mismo codigo que en el programa.    
     IF SW0 = '0' THEN nextstate <= S0;
     END IF;
     
@@ -68,21 +68,22 @@ BEGIN
 
         WHEN S1 =>
             LED <= '1';
-            IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) 
+            IF (rising_edge(START)) THEN
+                IF (ENDSTOP = '0' AND nextstate = S1 ) 
                     THEN nextstate <= S2;
+            END IF;
             END IF;
 
         WHEN S2 =>
             CINTA<= '1';
             IF (ENDSTOP = '1' AND nextstate = S2) THEN
---                CASE(SW1) IS
---                    WHEN => '1' nextstate <= S3;
---                    WHEN => '0' nextstate <= S1;
---                END CASE;
-            nextstate <= S3;
+                CASE SW1 IS
+                    WHEN '1' => nextstate <= S3;
+                    WHEN OTHERS => nextstate <= S1;
+                END CASE;
             END IF;
 
-        WHEN S3 =>  BITROBOT<='1';
+        WHEN S3 =>  BITROBOT <= '1'; 
 
     END CASE;
 
@@ -90,18 +91,28 @@ END PROCESS;
 
 INPUT: PROCESS
 BEGIN
+
     SW0 <= '1' AFTER 50 ns;
-    WAIT FOR 100 ns;
-
-    assert ((LED = '1') AND (state = S1))  -- expected output
-            -- error will be reported if sum or carry is not 0
-            report "test failed for state switch 0 -> 1" severity error;
-
+    SW1 <= '1' AFTER 20 ns;
     START <= '1' AFTER 150 ns;
-    WAIT FOR 100 ns;
 
-    assert ((CINTA = '1') AND (state = S2))
-    report "test failed for the state switch 1 -> 2" severity error;
+    WAIT UNTIL rising_edge(START);
+    WAIT FOR 10 ns;
+    START <= '0';   -- lo apagamos para simular que es un boton
+
+    WAIT FOR 50 ns;     -- mientras esto ocurre la pieza actual se esta moviendo y tarda 50 ns desde que se pone endstop a 0 en llegar a este
+    ENDSTOP <= '1';
+    WAIT FOR 200 ns;
+
+    RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
+
+    -- ************** CODIGO PARA LAS ENTRADAS CON SW1 = 0 ************************
+
+
+
+    --************** fin *********
+    WAIT;
+
 END PROCESS;
 
 end Behavioral;
