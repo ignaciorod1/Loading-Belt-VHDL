@@ -18,9 +18,9 @@ end loadingBelt;
 
 architecture Behavioral of loadingBelt is
 
-TYPE estados IS (S0, S1, S2, S3);
+TYPE state_type IS (S0, S1, S2, S3);
 
-SIGNAL state, nextstate: estados;
+SIGNAL state, nextstate: state_type;
 
 BEGIN
 
@@ -48,7 +48,10 @@ END PROCESS;
 
 NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
 BEGIN
-        
+    
+    IF SW0 = '0' THEN nextstate <= S0;
+    END IF;
+    
     CASE (state) is
 
         WHEN S0 =>
