@@ -11,14 +11,15 @@ PORT(
     RESET: IN STD_LOGIC;
     START: IN STD_LOGIC;
     SW0: IN STD_LOGIC;
+    ENDSTOP: IN STD_LOGIC;
     LED: OUT STD_LOGIC
     );
     
 END COMPONENT;
 
-TYPE state_type IS (S0, S1);
+TYPE state_type IS (S0, S1, S2);
 SIGNAL state, next_state: state_type;
-SIGNAL SW0_TB,RESET_TB,CLK_TB, START_TB: STD_LOGIC := '0';
+SIGNAL SW0_TB,RESET_TB,CLK_TB, START_TB, ENDSTOP_TB: STD_LOGIC := '0';
 SIGNAL LED_TB: STD_LOGIC ;
 
 begin
@@ -29,7 +30,8 @@ PORT MAP(
      RESET => RESET_TB,
      START => START_TB,
      LED => LED_TB,
-     SW0 => SW0_TB
+     SW0 => SW0_TB,
+     ENDSTOP => ENDSTOP_TB
 ); 
 
 CLOCK: PROCESS
@@ -42,12 +44,14 @@ INPUT: PROCESS
 BEGIN
     SW0_TB <= '1' AFTER 50 ns;
     WAIT FOR 100 ns;
+    START_TB <= '1' AFTER 150 ns;
+    WAIT FOR 100 ps;
 END PROCESS;
 
 RESET: PROCESS
 BEGIN
     RESET_TB <= NOT RESET_TB AFTER 300 ns;
-    WAIT FOR 100 ns;
+    WAIT FOR 10 ns;
 END PROCESS;
 
 PROCESS(CLK_TB , RESET_TB)
@@ -57,21 +61,33 @@ BEGIN
     END IF;
 END PROCESS;
 
-S0_1: PROCESS(state, SW0_TB)
+STATE_CHANGE: PROCESS(state, SW0_TB, START_TB, ENDSTOP_TB)
 BEGIN
-    IF state = S0 THEN
-        IF SW0_TB = '1' THEN next_state <= S1;
-        ELSE next_state <= S0;
-        END IF;
-    END IF;
+
+    CASE (state) is
+        WHEN S0 =>
+            IF (SW0_TB = '1') THEN next_state <= S1;
+            ELSE next_state <= S0;
+            END IF;
+
+        WHEN S1 =>
+            IF rising_edge(START_TB) AND ENDSTOP_TB = '0' THEN next_state <= S2;
+            END IF;
+
+        WHEN S2 =>
+            next_state <= S2;   -- cambiar
+    END CASE;
    
 END PROCESS;
-    
+
 OUTPUT: PROCESS(state, next_state, SW0_TB)
 BEGIN
-    IF state = S0 THEN LED_TB <= '0';
-    ELSIF state <= S1 THEN LED_TB <= '1';
-    END IF;
+    CASE(state) is
+        WHEN S0 => LED_TB <= '0';
+        WHEN S1 => LED_TB <= '1';
+        WHEN S2 => LED_TB <= '0';   -- eliminar 
+    END CASE;
+
 END PROCESS; 
 
 
@@ -79,3 +95,5 @@ END PROCESS;
 
 
 end Behavioral;
+
+    
