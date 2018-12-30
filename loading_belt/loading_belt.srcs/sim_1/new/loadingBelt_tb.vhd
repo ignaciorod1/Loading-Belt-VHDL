@@ -5,33 +5,37 @@ entity loadingBelt_tb is
 end loadingBelt_tb;
 
 architecture Behavioral of loadingBelt_tb is
-COMPONENT state1 IS
+COMPONENT loadingBelt IS
 PORT(
     CLK: IN STD_LOGIC;
     RESET: IN STD_LOGIC;
     START: IN STD_LOGIC;
     SW0: IN STD_LOGIC;
+    SW1: IN STD_LOGIC;
     ENDSTOP: IN STD_LOGIC;
-    LED: OUT STD_LOGIC
+    LED: OUT STD_LOGIC;
+    CINTA: OUT STD_LOGIC
     );
     
 END COMPONENT;
 
 TYPE state_type IS (S0, S1, S2);
 SIGNAL state, next_state: state_type;
-SIGNAL SW0_TB,RESET_TB,CLK_TB, START_TB, ENDSTOP_TB: STD_LOGIC := '0';
-SIGNAL LED_TB: STD_LOGIC ;
+SIGNAL SW0_TB, SW1_TB, RESET_TB,CLK_TB, START_TB, ENDSTOP_TB: STD_LOGIC := '0';
+SIGNAL LED_TB, CINTA_TB: STD_LOGIC ;
 
 begin
 
-uut: state1
+uut: loadingBelt
 PORT MAP(
      CLK => CLK_TB,
      RESET => RESET_TB,
      START => START_TB,
      LED => LED_TB,
      SW0 => SW0_TB,
-     ENDSTOP => ENDSTOP_TB
+     SW1 => SW1_TB,
+     ENDSTOP => ENDSTOP_TB,
+     CINTA => CINTA_TB
 ); 
 
 CLOCK: PROCESS
@@ -44,55 +48,17 @@ INPUT: PROCESS
 BEGIN
     SW0_TB <= '1' AFTER 50 ns;
     WAIT FOR 100 ns;
+
+    assert ((LED_TB = '1') AND (state = S1))  -- expected output
+            -- error will be reported if sum or carry is not 0
+            report "test failed for state switch 0 -> 1" severity error;
+
     START_TB <= '1' AFTER 150 ns;
-    WAIT FOR 100 ps;
+    WAIT FOR 100 ns;
+
+    assert ((CINTA_TB = '1') AND (state = S2))
+    report "test failed for the state switch 1 -> 2" severity error;
 END PROCESS;
-
-RESET: PROCESS
-BEGIN
-    RESET_TB <= NOT RESET_TB AFTER 300 ns;
-    WAIT FOR 10 ns;
-END PROCESS;
-
-PROCESS(CLK_TB , RESET_TB)
-BEGIN
-    IF RESET_TB = '1' THEN state <= S0;
-    ELSIF  rising_edge(CLK_TB) THEN state <= next_state;
-    END IF;
-END PROCESS;
-
-STATE_CHANGE: PROCESS(state, SW0_TB, START_TB, ENDSTOP_TB)
-BEGIN
-
-    CASE (state) is
-        WHEN S0 =>
-            IF (SW0_TB = '1') THEN next_state <= S1;
-            ELSE next_state <= S0;
-            END IF;
-
-        WHEN S1 =>
-            IF rising_edge(START_TB) AND ENDSTOP_TB = '0' THEN next_state <= S2;
-            END IF;
-
-        WHEN S2 =>
-            next_state <= S2;   -- cambiar
-    END CASE;
-   
-END PROCESS;
-
-OUTPUT: PROCESS(state, next_state, SW0_TB)
-BEGIN
-    CASE(state) is
-        WHEN S0 => LED_TB <= '0';
-        WHEN S1 => LED_TB <= '1';
-        WHEN S2 => LED_TB <= '0';   -- eliminar 
-    END CASE;
-
-END PROCESS; 
-
-
-
-
 
 end Behavioral;
 

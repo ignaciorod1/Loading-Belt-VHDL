@@ -7,10 +7,9 @@ entity loadingBelt is
     CLK: IN STD_LOGIC;
     RESET: IN STD_LOGIC;
     START: IN STD_LOGIC;
-    SW0: IN STD_LOGIC;
-    P1: IN STD_LOGIC;
-    P2: IN STD_LOGIC;
-    ENSTOP: IN STD_LOGIC;
+    SW0: IN STD_LOGIC;  -- switch to start the belt
+    SW1: IN STD_LOGIC;  -- switch to choose the product
+    ENDSTOP: IN STD_LOGIC;
     BITROBOT: OUT STD_LOGIC;
     LED: OUT STD_LOGIC;
     CINTA: OUT STD_LOGIC
@@ -22,11 +21,6 @@ architecture Behavioral of loadingBelt is
 TYPE estados IS (S0, S1, S2, S3);
 
 SIGNAL state, nextstate: estados;
-SIGNAL SW0_SIGNAL: STD_LOGIC;
-SIGNAL BITROBOT_SIGNAL: STD_LOGIC;
-SIGNAL ENDSTOP: STD_LOGIC;
-SIGNAL P1_SIGNAL, P2_SIGNAL,START_SIGNAL: STD_LOGIC;
-SIGNAL reset_signal: STD_LOGIC;
 
 BEGIN
 
@@ -52,9 +46,9 @@ BEGIN
 
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, START, ENDSTOP, P1,P2)
+NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
 BEGIN
-    nextstate <= S0;
+        
     CASE (state) is
 
         WHEN S0 =>
@@ -63,17 +57,18 @@ BEGIN
 
         WHEN S1 =>
             LED <= '1';
-            IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) THEN nextstate <= S2;
+            IF ( START = '1' AND ENDSTOP = '0' AND nextstate = S1 ) 
+                    THEN nextstate <= S2;
             END IF;
 
         WHEN S2 =>
             CINTA<= '1';
-            IF ( P1 = '1' AND ENDSTOP = '1' 
-                AND nextstate = S2 AND  P2 = '0' ) THEN nextstate <= S3;
-            END IF;
-
-            IF ( P1 = '0' AND ENDSTOP = '1' AND nextstate = S2 
-                AND  P2 = '1' ) THEN nextstate <= S1;
+            IF (ENDSTOP = '1' AND nextstate = S2) THEN
+--                CASE(SW1) IS
+--                    WHEN => '1' nextstate <= S3;
+--                    WHEN => '0' nextstate <= S1;
+--                END CASE;
+            nextstate <= S3;
             END IF;
 
         WHEN S3 =>  BITROBOT<='1';
@@ -82,3 +77,4 @@ BEGIN
 
 END PROCESS;
 end Behavioral;
+    
