@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Dec 30 21:38:21 2018
+# Process ID: 14140
+# Current directory: D:/Usuario/Desktop/Loading-Belt-VHDL-GPIOs/Loading-Belt-VHDL-GPIOs/loading_belt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9816 D:\Usuario\Desktop\Loading-Belt-VHDL-GPIOs\Loading-Belt-VHDL-GPIOs\loading_belt\loading_belt.xpr
+# Log file: D:/Usuario/Desktop/Loading-Belt-VHDL-GPIOs/Loading-Belt-VHDL-GPIOs/loading_belt/vivado.log
+# Journal file: D:/Usuario/Desktop/Loading-Belt-VHDL-GPIOs/Loading-Belt-VHDL-GPIOs/loading_belt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Usuario/Desktop/Loading-Belt-VHDL-GPIOs/Loading-Belt-VHDL-GPIOs/loading_belt/loading_belt.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 809.070 ; gain = 124.793
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 30 22:00:35 2018...
