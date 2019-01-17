@@ -56,3 +56,107 @@ launch_simulation
 reset_run synth_1
 launch_simulation
 source manager_tb.tcl
+current_sim simulation_3
+close_sim
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+close_design
+launch_simulation
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {5 sec} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {120 ms} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+add_bp {C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/manager.vhd} 87
+remove_bps -file {C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/manager.vhd} -line 87
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {80 ms} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl

@@ -115,22 +115,22 @@ BEGIN
     ENDSTOP <= '1';
     WAIT FOR 200 ns;
 
-    RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
+    --RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
 
     -- ************** CODIGO PARA LAS ENTRADAS CON SW1 = 0 ************************
-    SW0 <= '1' AFTER 50 ns;
-    SW1 <= '0' AFTER 20 ns;
-    START <= '1' AFTER 150 ns;
+--    SW0 <= '1' AFTER 50 ns;
+--    SW1 <= '0' AFTER 20 ns;
+--    START <= '1' AFTER 150 ns;
     
-    WAIT UNTIL rising_edge(START);
-    WAIT FOR 10 ns;
-    START <= '0';
+--    WAIT UNTIL rising_edge(START);
+--    WAIT FOR 10 ns;
+--    START <= '0';
     
-    WAIT FOR 50 ns;
-    ENDSTOP <= '1';
-    WAIT FOR 200 ns;
+--    WAIT FOR 50 ns;
+--    ENDSTOP <= '1';
+--    WAIT FOR 200 ns;
     
-    RESET <= '1';
+--    RESET <= '1';
 
 
     --************** fin *********

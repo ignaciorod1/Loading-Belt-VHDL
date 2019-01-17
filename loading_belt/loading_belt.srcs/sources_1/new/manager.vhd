@@ -14,8 +14,8 @@ entity manager is
     endstop: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
     bit_robot: OUT STD_LOGIC;    -- salida GPIO
     LED: OUT STD_LOGIC;         -- led de placa
-    servo: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
-
+    servo: OUT STD_LOGIC;     -- salida GPIO en caso de construir maqueta. Sino un LED
+    clk_servo: OUT STD_LOGIC
   	);
 end manager;
 
@@ -58,6 +58,13 @@ SIGNAL clk_pwm : STD_LOGIC := '0';
 SIGNAL move    : STD_LOGIC := '0';
 
 begin
+
+	clk_div_map : clk_div PORT MAP(
+		clk			=> clk0,
+		reset		=> reset,
+		clk_out 	=> clk_pwm 
+		);
+
 	
 	loadingBelt_map : loadingBelt PORT MAP(
 		clk 		=> clk0, 
@@ -71,17 +78,13 @@ begin
 		cinta 		=> move
 		);
 
-	clk_div_map : clk_div PORT MAP(
-		clk			=> clk0,
-		reset		=> reset,
-		clk_out 	=> clk_pwm 
-		);
-
 	PWM_map : PWM PORT MAP(
 		clk 		=> clk_pwm,
 		reset		=> reset, 
 		move		=> move, 
 		servo		=> servo
 		);
+	
+	clk_servo <= clk_pwm;
 
 end Behavioral;
