@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
 
 entity loadingBelt_tb is
 end loadingBelt_tb;
@@ -25,7 +26,7 @@ TYPE state_type IS (S0, S1, S2, S3, S4);
 SIGNAL state, nextstate: state_type;
 SIGNAL SW0, SW1, RESET,CLK, START, ENDSTOP: STD_LOGIC := '0';
 SIGNAL LED, CINTA, BITROBOT: STD_LOGIC := '0';
-SIGNAL ticks: INTEGER;
+SIGNAL TICKS : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
 
 begin
 

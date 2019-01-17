@@ -1,0 +1,12 @@
+pwm for servos in vhdl
+
+https://www.codeproject.com/Articles/513169/Servomotor-Control-with-PWM-and-VHDL
+
+syntax errors
+
+https://stackoverflow.com
+
+syntax
+
+https://vhdlwhiz.com/signed-unsigned/
+https://www.ics.uci.edu/~jmoorkan/vhdlref/

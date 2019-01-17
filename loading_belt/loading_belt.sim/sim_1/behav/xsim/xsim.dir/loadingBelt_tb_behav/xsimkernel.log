@@ -1,4 +1,4 @@
-Running: xsim.dir/loadingBelt_tb_behav/xsimk.exe -simmode gui -wdb loadingBelt_tb_behav.wdb -simrunnum 0 -socket 50635
+Running: xsim.dir/loadingBelt_tb_behav/xsimk.exe -simmode gui -wdb loadingBelt_tb_behav.wdb -simrunnum 0 -socket 51706
 Design successfully loaded
-Design Loading Memory Usage: 4912 KB (Peak: 4912 KB)
-Design Loading CPU Usage: 31 ms
+Design Loading Memory Usage: 4916 KB (Peak: 4916 KB)
+Design Loading CPU Usage: 15 ms

@@ -6,15 +6,15 @@ use IEEE.numeric_std.ALL;
 entity loadingBelt is
 --generic (ClockFrequency : INTEGER:= 50);
  Port (
-    CLK: IN STD_LOGIC;
-    RESET: IN STD_LOGIC;        -- boton de la placa
-    START: IN STD_LOGIC;        -- boton de la placa
+    clk: IN STD_LOGIC;
+    reset: IN STD_LOGIC;        -- boton de la placa
+    start: IN STD_LOGIC;        -- boton de la placa
     SW0: IN STD_LOGIC;  -- switch to start the belt
     SW1: IN STD_LOGIC;  -- switch to choose the product
-    ENDSTOP: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
-    BITROBOT: OUT STD_LOGIC;    -- salida GPIO
+    endstop: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
+    bit_robot: OUT STD_LOGIC;    -- salida GPIO
     LED: OUT STD_LOGIC;         -- led de placa
-    CINTA: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
+    cinta: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
   );
 end loadingBelt;
 
@@ -23,14 +23,14 @@ architecture Behavioral of loadingBelt is
 TYPE state_type IS (S0, S1, S2, S3, S4);
 
 SIGNAL state, nextstate: state_type;
-SIGNAL ticks: INTEGER := 0; --Signal for counting clock periods
+SIGNAL ticks : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
 
 BEGIN
 
-SYNC_PROC: PROCESS (CLK)
+SYNC_PROC: PROCESS (clk)
     BEGIN
-        IF rising_edge(CLK) THEN
-            IF RESET = '1' THEN state <= S0;
+        IF rising_edge(clk) THEN
+            IF reset = '1' THEN state <= S0;
             
             ELSE state <= nextstate;
             
@@ -50,7 +50,7 @@ BEGIN
 
     WHEN S2 => CINTA <= '1';
 
-    WHEN S3 => BITROBOT <='1';
+    WHEN S3 => bit_robot <='1';
                CINTA <= '0';
                
     WHEN S4 => CINTA <= '1';
