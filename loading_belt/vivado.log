@@ -2,24 +2,215 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Dec 12 10:36:38 2018
-# Process ID: 7572
-# Current directory: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9716 D:\Usuario\Documents\GitHub\Loading-Belt-VHDL\loading_belt\loading_belt.xpr
-# Log file: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/vivado.log
-# Journal file: D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt\vivado.jou
+# Start of session at: Thu Jan 17 14:05:37 2019
+# Process ID: 5052
+# Current directory: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10296 C:\Users\user\Documents\GitHub\Loading-Belt-VHDL\loading_belt\loading_belt.xpr
+# Log file: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/vivado.log
+# Journal file: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Usuario/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr
+open_project C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 884.273 ; gain = 119.445
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 757.984 ; gain = 54.016
 update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'loadingBelt_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj loadingBelt_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/loadingBelt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity loadingBelt
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sim_1/new/loadingBelt_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity loadingBelt_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 98453087b8004fa0bbcdf6252eaaa45e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot loadingBelt_tb_behav xil_defaultlib.loadingBelt_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.loadingBelt [loadingbelt_default]
+Compiling architecture behavioral of entity xil_defaultlib.loadingbelt_tb
+Built simulation snapshot loadingBelt_tb_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim/xsim.dir/loadingBelt_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim/xsim.dir/loadingBelt_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Jan 17 14:07:39 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 17 14:07:39 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 791.133 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "loadingBelt_tb_behav -key {Behavioral:sim_1:Functional:loadingBelt_tb} -tclbatch {loadingBelt_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source loadingBelt_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'loadingBelt_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 804.586 ; gain = 27.262
+launch_runs synth_1 -jobs 4
+[Thu Jan 17 14:24:27 2019] Launched synth_1...
+Run output will be captured here: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/CONSTRAINT/Nexys-4-DDR-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 1223.832 ; gain = 398.477
+close [ open C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/PWM.vhd w ]
+add_files C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/PWM.vhd
+close [ open C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd w ]
+add_files C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd
 update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd
+remove_files  C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd
+WARNING: [Vivado 12-818] No files matched 'C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clock_divider.vhd'
+close [ open C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clk_div.vhd w ]
+add_files C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/clk_div.vhd
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+close [ open C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/manager.vhd w ]
+add_files C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/manager.vhd
 update_compile_order -fileset sources_1
