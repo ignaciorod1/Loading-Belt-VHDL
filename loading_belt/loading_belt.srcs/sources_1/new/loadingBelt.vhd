@@ -1,8 +1,10 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
 
 entity loadingBelt is
+--generic (ClockFrequency : INTEGER:= 50);
  Port (
     CLK: IN STD_LOGIC;
     RESET: IN STD_LOGIC;        -- boton de la placa
@@ -18,9 +20,10 @@ end loadingBelt;
 
 architecture Behavioral of loadingBelt is
 
-TYPE state_type IS (S0, S1, S2, S3);
+TYPE state_type IS (S0, S1, S2, S3, S4);
 
 SIGNAL state, nextstate: state_type;
+SIGNAL ticks: INTEGER := 0; --Signal for counting clock periods
 
 BEGIN
 
@@ -28,8 +31,11 @@ SYNC_PROC: PROCESS (CLK)
     BEGIN
         IF rising_edge(CLK) THEN
             IF RESET = '1' THEN state <= S0;
+            
             ELSE state <= nextstate;
+            
             END IF;
+        ticks <= ticks + 1;    
         END IF;
 END PROCESS;
 
@@ -45,7 +51,10 @@ BEGIN
     WHEN S2 => CINTA <= '1';
 
     WHEN S3 => BITROBOT <='1';
-
+               CINTA <= '0';
+               
+    WHEN S4 => CINTA <= '1';
+    
  END CASE;
 
 END PROCESS;
@@ -63,7 +72,6 @@ BEGIN
             END IF;
 
         WHEN S1 =>
-            LED <= '1';
             IF ( rising_edge(START)) THEN
                 IF (ENDSTOP = '0' AND nextstate = S1 ) THEN -- start es con flanco de subida porque es un boton, no un pulsador.
                      nextstate <= S2;
@@ -71,19 +79,23 @@ BEGIN
             END IF;
 
         WHEN S2 =>
-            CINTA <= '1';
             IF (ENDSTOP = '1' AND nextstate = S2) THEN
                 CASE SW1 IS
                     WHEN '1' => nextstate <= S3;    -- si SW1 esta en 1, la pieza se para y la recoge el robot (estado 3)
-                    WHEN OTHERS => nextstate <= S1; -- si SW1 esta en 0, la pieza continua hasta que llega al final de la cinta y cae a una caja
+                    WHEN OTHERS => nextstate <= S4; -- si SW1 esta en 0, la pieza continua hasta que llega al final de la cinta y cae a una caja
                                                     -- para esto habria que suponer el tiempo que tarda en llegar al final (5 segundos (?)) y ...
                                                     -- ... esto seria es estado 4.
                 END CASE;
             END IF; 
 
-        WHEN S3 =>  BITROBOT<='1';
-
-    END CASE;
+        WHEN S3 =>  
+            
+        WHEN S4 =>
+            IF ticks = 20000 THEN
+            nextstate <= S1;
+            
+            END IF;
+     END CASE;
 
 END PROCESS;
 end Behavioral;
