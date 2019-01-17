@@ -38,6 +38,6 @@ begin
         end if;
     end process;
     -- Output signal for the servo
-    servo <= '1' WHEN (cnt > 50) AND (cnt < 200) else 
+    servo <= '1' WHEN (cnt > 25) AND (cnt < pwmi) else 
     		 '0';
 end Behavioral;

@@ -10,3 +10,7 @@ syntax
 
 https://vhdlwhiz.com/signed-unsigned/
 https://www.ics.uci.edu/~jmoorkan/vhdlref/
+
+hardware
+
+https://reference.digilentinc.com/reference/programmable-logic/nexys-4-ddr/reference-manual
