@@ -23,10 +23,10 @@ END COMPONENT;
 
 TYPE state_type IS (S0, S1, S2, S3, S4);
 SIGNAL state, nextstate: state_type;
-SIGNAL SW0, SW1, clk0, clk_servo, start, endstop: STD_LOGIC := '0';
+SIGNAL SW0, SW1, clk0, clk_servo, start: STD_LOGIC := '0';
 SIGNAL LED, servo, bit_robot: STD_LOGIC := '0';
 SIGNAL ticks : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
-SIGNAL reset: STD_LOGIC := '1';
+SIGNAL reset, endstop: STD_LOGIC := '1';
 begin
 
 uut: manager
@@ -71,23 +71,23 @@ begin                                                        -- se hace con las 
 
         WHEN S1 =>
             IF (rising_edge(start)) THEN
-                IF (endstop = '0' AND nextstate = S1 ) 
+                IF (endstop = '1' AND nextstate = S1 ) 
                     THEN nextstate <= S2;
             END IF;
             END IF;
 
         WHEN S2 =>
-            IF (ENDSTOP = '1' AND nextstate = S2) THEN
+            IF endstop = '0' THEN
                 CASE SW1 IS
                     WHEN '1' => nextstate <= S3;
-                    WHEN OTHERS => nextstate <= S1;
+                    WHEN OTHERS => nextstate <= S4;
                 END CASE;
             END IF;
 
-        WHEN S3 =>  --nextstate <= S0 AFTER 500 ns;               
+        WHEN S3 =>              
         
         WHEN S4 =>  IF ticks = 20000 THEN
-                    nextstate <= S0 AFTER 500 ns;
+                    nextstate <= S0;
                     
                     END IF;
            
@@ -107,7 +107,7 @@ BEGIN
     START <= '0';   -- lo apagamos para simular que es un boton
 
     WAIT FOR 40ms;     -- mientras esto ocurre la pieza actual se esta moviendo y tarda 50 ns desde que se pone endstop a 0 en llegar a este
-    ENDSTOP <= '1';
+    ENDSTOP <= '0';
 --    WAIT FOR 200 ns;
 
     --RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')

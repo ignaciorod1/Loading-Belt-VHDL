@@ -61,7 +61,7 @@ BEGIN
 
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (nextstate, state, SW0, SW1, START, ENDSTOP, ticks)
+NEXT_STATE_DECODE: PROCESS (nextstate, state, SW0, SW1, START, endstop, ticks)
 BEGIN
     
     IF SW0 = '0' THEN nextstate <= S0;
@@ -75,13 +75,13 @@ BEGIN
 
         WHEN S1 =>
             IF ( rising_edge(START)) THEN
-                IF (ENDSTOP = '0' AND nextstate = S1 ) THEN -- start es con flanco de subida porque es un boton, no un pulsador.
+                IF endstop = '1' THEN -- start es con flanco de subida porque es un boton, no un pulsador.
                      nextstate <= S2;
-            END IF;
+                END IF;
             END IF;
 
         WHEN S2 =>
-            IF (ENDSTOP = '1' AND nextstate = S2) THEN
+            IF endstop = '0' THEN
                 CASE SW1 IS
                     WHEN '1' => nextstate <= S3;    -- si SW1 esta en 1, la pieza se para y la recoge el robot (estado 3)
                     WHEN OTHERS => nextstate <= S4; -- si SW1 esta en 0, la pieza continua hasta que llega al final de la cinta y cae a una caja

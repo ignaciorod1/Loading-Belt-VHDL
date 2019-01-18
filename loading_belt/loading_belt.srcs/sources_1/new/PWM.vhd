@@ -20,7 +20,7 @@ begin
     -- if the belt is activated, the servo gets a 2ms duty cycle order which will move it clockwise (<1.5 ms (75 ticks) counterclockwise)
     movement: process (move) begin
     	if move = '1' then
-    		pwmi <= 133;	-- (2ms * 999 ticks per period / 20ms per period)
+    		pwmi <= 130;	-- (2ms * 999 ticks per period / 20ms per period)
     	else
     		pwmi <= 100;
     	end if;
