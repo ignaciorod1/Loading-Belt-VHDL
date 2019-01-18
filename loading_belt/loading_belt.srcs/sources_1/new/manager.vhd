@@ -14,8 +14,7 @@ entity manager is
     endstop: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
     bit_robot: OUT STD_LOGIC;    -- salida GPIO
     LED: OUT STD_LOGIC;         -- led de placa
-    servo: OUT STD_LOGIC;     -- salida GPIO en caso de construir maqueta. Sino un LED
-    clk_servo: OUT STD_LOGIC
+    servo: OUT STD_LOGIC     -- salida GPIO en caso de construir maqueta. Sino un LED
   	);
 end manager;
 
@@ -85,6 +84,4 @@ begin
 		servo		=> servo
 		);
 	
-	clk_servo <= clk_pwm;
-
 end Behavioral;

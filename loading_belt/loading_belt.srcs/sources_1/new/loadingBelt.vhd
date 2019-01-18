@@ -23,7 +23,7 @@ architecture Behavioral of loadingBelt is
 TYPE state_type IS (S0, S1, S2, S3, S4);
 
 SIGNAL state, nextstate: state_type;
-SIGNAL ticks : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
+SIGNAL ticks : INTEGER range 0 to 30000:= 0; --Signal for counting clock periods
 
 BEGIN
 
@@ -59,7 +59,7 @@ BEGIN
 
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
+NEXT_STATE_DECODE: PROCESS (nextstate, state, SW0, SW1, START, ENDSTOP, ticks)
 BEGIN
     
     IF SW0 = '0' THEN nextstate <= S0;
