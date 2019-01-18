@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1547751339">
-  <File Type="OPT-HWDEF" Name="manager.hwdef"/>
   <File Type="PA-DCP" Name="manager.dcp"/>
-  <File Type="BITSTR-BMM" Name="manager_bd.bmm"/>
+  <File Type="OPT-HWDEF" Name="manager.hwdef"/>
   <File Type="PA-TCL" Name="manager.tcl"/>
-  <File Type="REPORTS-TCL" Name="manager_reports.tcl"/>
+  <File Type="BITSTR-BMM" Name="manager_bd.bmm"/>
   <File Type="OPT-DCP" Name="manager_opt.dcp"/>
+  <File Type="REPORTS-TCL" Name="manager_reports.tcl"/>
   <File Type="OPT-DRC" Name="manager_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="manager_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="manager_placed.dcp"/>

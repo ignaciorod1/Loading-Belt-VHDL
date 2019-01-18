@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Jan 18 19:18:44 2019
+| Date         : Fri Jan 18 21:12:29 2019
 | Host         : LAPTOP-JTBVS0F0 running 64-bit major release  (build 9200)
 | Command      : report_drc -file manager_drc_routed.rpt -pb manager_drc_routed.pb -rpx manager_drc_routed.rpx
 | Design       : manager
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 8
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 5          |
+| PDRC-153 | Warning  | Gated clock check                                   | 6          |
 | PLCK-12  | Warning  | Clock Placer Checks                                 | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
@@ -55,20 +55,25 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net loadingBelt_map/cinta_reg_i_2_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/cinta_reg_i_2/O, cell loadingBelt_map/cinta_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net loadingBelt_map/bit_robot_reg_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/bit_robot_reg_i_1/O, cell loadingBelt_map/bit_robot_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net loadingBelt_map/nextstate_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[0]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net loadingBelt_map/cinta_reg_i_2_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/cinta_reg_i_2/O, cell loadingBelt_map/cinta_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net loadingBelt_map/nextstate_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[1]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net loadingBelt_map/nextstate_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[0]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
+Gated clock check  
+Net loadingBelt_map/nextstate_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[1]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
 Gated clock check  
 Net loadingBelt_map/nextstate_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[2]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

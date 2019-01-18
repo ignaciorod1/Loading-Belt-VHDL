@@ -30,7 +30,7 @@ BEGIN
 SYNC_PROC: PROCESS (clk)
     BEGIN
         IF rising_edge(clk) THEN
-            IF reset = '1' THEN state <= S0;
+            IF reset = '0' THEN state <= S0;
             
             ELSE state <= nextstate;
             
@@ -45,13 +45,15 @@ BEGIN
 
  CASE (state) is
     WHEN S0 => LED <= '0';  -- FUTURE RED LED
+               bit_robot <='0';
+               CINTA <= '0';
 
     WHEN S1 => LED <= '1';  --  FUTURE BLINK LED FUNCTION/ PROCEDURE
 
     WHEN S2 => CINTA <= '1';
 
     WHEN S3 => bit_robot <='1';
-               CINTA <= '0';
+                  CINTA <= '0';
                
     WHEN S4 => CINTA <= '1';
     

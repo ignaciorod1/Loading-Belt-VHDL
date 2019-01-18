@@ -20,14 +20,14 @@ begin
     -- if the belt is activated, the servo gets a 2ms duty cycle order which will move it clockwise (<1.5 ms (75 ticks) counterclockwise)
     movement: process (move) begin
     	if move = '1' then
-    		pwmi <= 100;	-- (2ms * 999 ticks per period / 20ms per period)
+    		pwmi <= 133;	-- (2ms * 999 ticks per period / 20ms per period)
     	else
-    		pwmi <= 75;
+    		pwmi <= 100;
     	end if;
     end process;
     -- Counter process, from 0 to 999
     counter: process (reset, clk) begin
-        if (reset = '1') then
+        if (reset = '0') then
             cnt <= 0;
         elsif rising_edge(clk) then
             if (cnt = 1000) then

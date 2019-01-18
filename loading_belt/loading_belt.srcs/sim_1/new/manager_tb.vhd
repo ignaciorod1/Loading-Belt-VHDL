@@ -9,7 +9,6 @@ architecture Behavioral of manager_tb is
 COMPONENT manager IS
 PORT(
     clk0: IN STD_LOGIC;
-    clk_servo : OUT STD_LOGIC;
     reset: IN STD_LOGIC;        -- boton de la placa
     start: IN STD_LOGIC;        -- boton de la placa
     SW0: IN STD_LOGIC;          -- switch to start the belt
@@ -24,16 +23,15 @@ END COMPONENT;
 
 TYPE state_type IS (S0, S1, S2, S3, S4);
 SIGNAL state, nextstate: state_type;
-SIGNAL SW0, SW1, reset, clk0, clk_servo, start, endstop: STD_LOGIC := '0';
+SIGNAL SW0, SW1, clk0, clk_servo, start, endstop: STD_LOGIC := '0';
 SIGNAL LED, servo, bit_robot: STD_LOGIC := '0';
 SIGNAL ticks : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
-
+SIGNAL reset: STD_LOGIC := '1';
 begin
 
 uut: manager
 PORT MAP(
      clk0 => clk0,
-     clk_servo => clk_servo,
      reset => reset,
      start => start,
      LED => LED,
@@ -53,7 +51,7 @@ END PROCESS;
 SYNC_PROC: PROCESS (clk0)
     BEGIN
         IF rising_edge(clk0) THEN
-            IF reset = '1' THEN state <= S0;
+            IF reset = '0' THEN state <= S0;
             ELSE state <= nextstate;
             END IF;
         END IF;
@@ -108,8 +106,8 @@ BEGIN
     WAIT FOR 10 ns;
     START <= '0';   -- lo apagamos para simular que es un boton
 
---    WAIT FOR 5 sec;     -- mientras esto ocurre la pieza actual se esta moviendo y tarda 50 ns desde que se pone endstop a 0 en llegar a este
-    --ENDSTOP <= '1';
+    WAIT FOR 40ms;     -- mientras esto ocurre la pieza actual se esta moviendo y tarda 50 ns desde que se pone endstop a 0 en llegar a este
+    ENDSTOP <= '1';
 --    WAIT FOR 200 ns;
 
     --RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
