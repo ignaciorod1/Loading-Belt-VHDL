@@ -10,15 +10,15 @@ entity clk_div is
 end clk_div;
  
 architecture Behavioral of clk_div is
-    signal temporal: STD_LOGIC;
-    signal counter : integer range 0 to 2000 := 0;
+    signal temporal: STD_LOGIC := '0';
+    signal counter : integer range 0 to 1001 := 0;
 begin
     freq_divider: process (reset, clk) begin
-        if (reset = '1') then
+        if (reset = '0') then
             temporal <= '0';
             counter  <= 0;
         elsif rising_edge(clk) then
-            if (counter = 780) then
+            if (counter = 1000) then
                 temporal <= NOT(temporal);
                 counter  <= 0;
             else

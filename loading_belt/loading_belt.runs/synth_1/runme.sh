@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log loadingBelt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source loadingBelt.tcl
+EAStep vivado -log manager.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source manager.tcl

@@ -6,15 +6,15 @@ use IEEE.numeric_std.ALL;
 entity loadingBelt is
 --generic (ClockFrequency : INTEGER:= 50);
  Port (
-    CLK: IN STD_LOGIC;
-    RESET: IN STD_LOGIC;        -- boton de la placa
-    START: IN STD_LOGIC;        -- boton de la placa
+    clk: IN STD_LOGIC;
+    reset: IN STD_LOGIC;        -- boton de la placa
+    start: IN STD_LOGIC;        -- boton de la placa
     SW0: IN STD_LOGIC;  -- switch to start the belt
     SW1: IN STD_LOGIC;  -- switch to choose the product
-    ENDSTOP: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
-    BITROBOT: OUT STD_LOGIC;    -- salida GPIO
+    endstop: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
+    bit_robot: OUT STD_LOGIC;    -- salida GPIO
     LED: OUT STD_LOGIC;         -- led de placa
-    CINTA: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
+    cinta: OUT STD_LOGIC        -- salida GPIO en caso de construir maqueta. Sino un LED
   );
 end loadingBelt;
 
@@ -23,14 +23,14 @@ architecture Behavioral of loadingBelt is
 TYPE state_type IS (S0, S1, S2, S3, S4);
 
 SIGNAL state, nextstate: state_type;
-SIGNAL ticks: INTEGER := 0; --Signal for counting clock periods
+SIGNAL ticks : INTEGER range 0 to 30000:= 0; --Signal for counting clock periods
 
 BEGIN
 
-SYNC_PROC: PROCESS (CLK)
+SYNC_PROC: PROCESS (clk)
     BEGIN
-        IF rising_edge(CLK) THEN
-            IF RESET = '1' THEN state <= S0;
+        IF rising_edge(clk) THEN
+            IF reset = '0' THEN state <= S0;
             
             ELSE state <= nextstate;
             
@@ -45,13 +45,15 @@ BEGIN
 
  CASE (state) is
     WHEN S0 => LED <= '0';  -- FUTURE RED LED
+               bit_robot <='0';
+               CINTA <= '0';
 
     WHEN S1 => LED <= '1';  --  FUTURE BLINK LED FUNCTION/ PROCEDURE
 
     WHEN S2 => CINTA <= '1';
 
-    WHEN S3 => BITROBOT <='1';
-               CINTA <= '0';
+    WHEN S3 => bit_robot <='1';
+                  CINTA <= '0';
                
     WHEN S4 => CINTA <= '1';
     
@@ -59,7 +61,7 @@ BEGIN
 
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)
+NEXT_STATE_DECODE: PROCESS (nextstate, state, SW0, SW1, START, endstop, ticks)
 BEGIN
     
     IF SW0 = '0' THEN nextstate <= S0;
@@ -73,13 +75,13 @@ BEGIN
 
         WHEN S1 =>
             IF ( rising_edge(START)) THEN
-                IF (ENDSTOP = '0' AND nextstate = S1 ) THEN -- start es con flanco de subida porque es un boton, no un pulsador.
+                IF endstop = '1' THEN -- start es con flanco de subida porque es un boton, no un pulsador.
                      nextstate <= S2;
-            END IF;
+                END IF;
             END IF;
 
         WHEN S2 =>
-            IF (ENDSTOP = '1' AND nextstate = S2) THEN
+            IF endstop = '0' THEN
                 CASE SW1 IS
                     WHEN '1' => nextstate <= S3;    -- si SW1 esta en 1, la pieza se para y la recoge el robot (estado 3)
                     WHEN OTHERS => nextstate <= S4; -- si SW1 esta en 0, la pieza continua hasta que llega al final de la cinta y cae a una caja

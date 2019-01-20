@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sources_1/new/loadingBelt.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity loadingBelt
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sim_1/new/loadingBelt_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity loadingBelt_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.srcs/sim_1/new/manager_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity manager_tb

@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
 
 entity loadingBelt_tb is
 end loadingBelt_tb;
@@ -25,7 +26,7 @@ TYPE state_type IS (S0, S1, S2, S3, S4);
 SIGNAL state, nextstate: state_type;
 SIGNAL SW0, SW1, RESET,CLK, START, ENDSTOP: STD_LOGIC := '0';
 SIGNAL LED, CINTA, BITROBOT: STD_LOGIC := '0';
-SIGNAL ticks: INTEGER;
+SIGNAL TICKS : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
 
 begin
 
@@ -114,22 +115,22 @@ BEGIN
     ENDSTOP <= '1';
     WAIT FOR 200 ns;
 
-    RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
+    --RESET <= '1'; -- simulamos un reset y ahora el codigo con la otra piez (SW1 = '0')
 
     -- ************** CODIGO PARA LAS ENTRADAS CON SW1 = 0 ************************
-    SW0 <= '1' AFTER 50 ns;
-    SW1 <= '0' AFTER 20 ns;
-    START <= '1' AFTER 150 ns;
+--    SW0 <= '1' AFTER 50 ns;
+--    SW1 <= '0' AFTER 20 ns;
+--    START <= '1' AFTER 150 ns;
     
-    WAIT UNTIL rising_edge(START);
-    WAIT FOR 10 ns;
-    START <= '0';
+--    WAIT UNTIL rising_edge(START);
+--    WAIT FOR 10 ns;
+--    START <= '0';
     
-    WAIT FOR 50 ns;
-    ENDSTOP <= '1';
-    WAIT FOR 200 ns;
+--    WAIT FOR 50 ns;
+--    ENDSTOP <= '1';
+--    WAIT FOR 200 ns;
     
-    RESET <= '1';
+--    RESET <= '1';
 
 
     --************** fin *********

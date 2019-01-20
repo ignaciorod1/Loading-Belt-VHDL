@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../loading_belt.srcs/sources_1/new/PWM.vhd" \
+"../../../../loading_belt.srcs/sources_1/new/clk_div.vhd" \
+"../../../../loading_belt.srcs/sources_1/new/loadingBelt.vhd" \
+"../../../../loading_belt.srcs/sources_1/new/manager.vhd" \
+"../../../../loading_belt.srcs/sim_1/new/manager_tb.vhd" \
+
+# Do not sort compile order
+nosort
