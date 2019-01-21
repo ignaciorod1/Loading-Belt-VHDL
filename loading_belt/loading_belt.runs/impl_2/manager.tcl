@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -68,10 +67,10 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param synth.incrementalSynthesisCache C:/Users/user/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16680-LAPTOP-JTBVS0F0/incrSyn
+  set_param synth.incrementalSynthesisCache D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/.Xil/Vivado-5788-DESKTOP-43LO6SA/incrSyn
   set_param xicom.use_bs_reader 1
   open_checkpoint manager_routed.dcp
-  set_property webtalk.parent_dir C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.cache/wt [current_project]
+  set_property webtalk.parent_dir D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.cache/wt [current_project]
   catch { write_mem_info -force manager.mmi }
   write_bitstream -force manager.bit -bin_file
   catch {write_debug_probes -quiet -force manager}

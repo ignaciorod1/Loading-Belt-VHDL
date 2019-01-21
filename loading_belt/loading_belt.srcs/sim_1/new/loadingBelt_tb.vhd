@@ -14,6 +14,7 @@ PORT(
     SW0: IN STD_LOGIC;
     SW1: IN STD_LOGIC;
     ENDSTOP: IN STD_LOGIC;
+    BIT_MICRO: IN STD_LOGIC;
     LED: OUT STD_LOGIC;
     CINTA: OUT STD_LOGIC;
     BITROBOT: OUT STD_LOGIC
@@ -25,7 +26,7 @@ END COMPONENT;
 TYPE state_type IS (S0, S1, S2, S3, S4);
 SIGNAL state, nextstate: state_type;
 SIGNAL SW0, SW1, RESET,CLK, START, ENDSTOP: STD_LOGIC := '0';
-SIGNAL LED, CINTA, BITROBOT: STD_LOGIC := '0';
+SIGNAL LED, CINTA, BITROBOT, BIT_MICRO: STD_LOGIC := '0';
 SIGNAL TICKS : unsigned( 12 downto 0 ) := (others => '0'); --Signal for counting clock periods
 
 begin
@@ -39,6 +40,7 @@ PORT MAP(
      SW0 => SW0,
      SW1 => SW1,
      ENDSTOP => ENDSTOP,
+     BIT_MICRO => BIT_MICRO,
      CINTA => CINTA
 
 ); 
@@ -58,7 +60,7 @@ SYNC_PROC: PROCESS (CLK)
         END IF;
 END PROCESS;
 
-NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP)    -- simula la evolucion de las entradas. No se pueden ver directamente como 
+NEXT_STATE_DECODE: PROCESS (state, SW0, SW1, START, ENDSTOP,BIT_MICRO)    -- simula la evolucion de las entradas. No se pueden ver directamente como 
 begin                                                        -- se hace con las salidas porque son SIGNAL dentro del codigo, y no se pueden meter dentro del
                                                         -- COMPONENT. Para simular su evolucion, esta en el testbench el mismo codigo que en el programa.    
     IF SW0 = '0' THEN nextstate <= S0;

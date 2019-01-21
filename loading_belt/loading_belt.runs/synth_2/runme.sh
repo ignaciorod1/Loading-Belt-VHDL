@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/loading_belt.runs/synth_2'
+HD_PWD='D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/synth_2'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
