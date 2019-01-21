@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Jan 18 21:11:55 2019
-| Host         : LAPTOP-JTBVS0F0 running 64-bit major release  (build 9200)
+| Date         : Mon Jan 21 17:57:01 2019
+| Host         : DESKTOP-43LO6SA running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file manager_control_sets_placed.rpt
 | Design       : manager
 | Device       : xc7a100t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    13 |
-| Unused register locations in slices containing registers |    70 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |           10 |
+|      2 |            2 |
+|      6 |            1 |
 |    16+ |            3 |
 +--------+--------------+
 
@@ -45,11 +46,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              42 |            8 |
-| No           | No                    | Yes                    |              44 |            8 |
-| No           | Yes                   | No                     |               6 |            3 |
+| No           | No                    | No                     |              46 |            9 |
+| No           | No                    | Yes                    |              42 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               6 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -57,22 +58,15 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------+----------------------------------------+----------------------------------------------+------------------+----------------+
-|                  Clock Signal                 |              Enable Signal             |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
-+-----------------------------------------------+----------------------------------------+----------------------------------------------+------------------+----------------+
-|  loadingBelt_map/nextstate_reg[1]_LDC_i_1_n_0 |                                        | loadingBelt_map/nextstate_reg[1]_LDC_i_2_n_0 |                1 |              2 |
-|  loadingBelt_map/LED_reg_i_1_n_0              |                                        |                                              |                1 |              2 |
-|  loadingBelt_map/nextstate_reg[2]_LDC_i_1_n_0 |                                        | loadingBelt_map/nextstate_reg[2]_LDC_i_2_n_0 |                1 |              2 |
-|  loadingBelt_map/nextstate_reg[0]_LDC_i_1_n_0 |                                        | loadingBelt_map/nextstate_reg[0]_LDC_i_2_n_0 |                1 |              2 |
-|  loadingBelt_map/cinta_reg_i_2_n_0            |                                        |                                              |                1 |              2 |
-|  loadingBelt_map/bit_robot_reg_i_1_n_0        |                                        |                                              |                1 |              2 |
-|  start_IBUF_BUFG                              |                                        | loadingBelt_map/nextstate_reg[1]_LDC_i_2_n_0 |                1 |              2 |
-|  start_IBUF_BUFG                              | loadingBelt_map/nextstate[2]_P_i_1_n_0 | loadingBelt_map/nextstate_reg[1]_LDC_i_1_n_0 |                1 |              2 |
-|  start_IBUF_BUFG                              | loadingBelt_map/nextstate[2]_P_i_1_n_0 | loadingBelt_map/nextstate_reg[2]_LDC_i_1_n_0 |                1 |              2 |
-|  start_IBUF_BUFG                              | loadingBelt_map/nextstate[2]_P_i_1_n_0 | loadingBelt_map/nextstate_reg[0]_LDC_i_1_n_0 |                1 |              2 |
-|  clk_div_map/CLK                              |                                        | clk_div_map/temporal_reg_0                   |                3 |             20 |
-|  clk0_IBUF_BUFG                               |                                        | clk_div_map/temporal_reg_0                   |                4 |             22 |
-|  clk0_IBUF_BUFG                               |                                        |                                              |                5 |             36 |
-+-----------------------------------------------+----------------------------------------+----------------------------------------------+------------------+----------------+
++-------------------------------------------+---------------+----------------------------+------------------+----------------+
+|                Clock Signal               | Enable Signal |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-------------------------------------------+---------------+----------------------------+------------------+----------------+
+|  loadingBelt_map/LED_reg_i_1_n_0          |               |                            |                1 |              2 |
+| ~loadingBelt_map/state[2]                 |               |                            |                1 |              2 |
+|  loadingBelt_map/nextstate_reg[2]_i_2_n_0 |               |                            |                1 |              6 |
+|  clk_div_map/CLK                          |               | clk_div_map/temporal_reg_0 |                3 |             20 |
+|  clk0_IBUF_BUFG                           |               | clk_div_map/temporal_reg_0 |                3 |             22 |
+|  clk0_IBUF_BUFG                           |               |                            |                6 |             36 |
++-------------------------------------------+---------------+----------------------------+------------------+----------------+
 
 

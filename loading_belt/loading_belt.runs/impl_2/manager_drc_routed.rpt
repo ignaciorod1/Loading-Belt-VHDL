@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Jan 18 21:12:29 2019
-| Host         : LAPTOP-JTBVS0F0 running 64-bit major release  (build 9200)
+| Date         : Mon Jan 21 17:57:41 2019
+| Host         : DESKTOP-43LO6SA running 64-bit major release  (build 9200)
 | Command      : report_drc -file manager_drc_routed.rpt -pb manager_drc_routed.pb -rpx manager_drc_routed.rpx
 | Design       : manager
 | Device       : xc7a100tcsg324-1
@@ -24,13 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 8
+             Violations found: 3
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 6          |
-| PLCK-12  | Warning  | Clock Placer Checks                                 | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 2          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -55,38 +54,7 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net loadingBelt_map/bit_robot_reg_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/bit_robot_reg_i_1/O, cell loadingBelt_map/bit_robot_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net loadingBelt_map/cinta_reg_i_2_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/cinta_reg_i_2/O, cell loadingBelt_map/cinta_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net loadingBelt_map/nextstate_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[0]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net loadingBelt_map/nextstate_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[1]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net loadingBelt_map/nextstate_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[2]_LDC_i_1/O, cell loadingBelt_map/nextstate_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PLCK-12#1 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
-	start_IBUF_inst (IBUF.O) is locked to N17
-	start_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
-
+Net loadingBelt_map/nextstate_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin loadingBelt_map/nextstate_reg[2]_i_2/O, cell loadingBelt_map/nextstate_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

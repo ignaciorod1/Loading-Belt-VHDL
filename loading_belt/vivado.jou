@@ -2,11 +2,110 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Jan 18 17:31:42 2019
-# Process ID: 15040
-# Current directory: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19076 C:\Users\user\Documents\GitHub\Loading-Belt-VHDL\loading_belt\loading_belt.xpr
-# Log file: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt/vivado.log
-# Journal file: C:/Users/user/Documents/GitHub/Loading-Belt-VHDL/loading_belt\vivado.jou
+# Start of session at: Mon Jan 21 15:20:20 2019
+# Process ID: 5788
+# Current directory: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3800 D:\Usuario\Desktop\Loading-Belt-VHDL-structure\loading_belt\loading_belt.xpr
+# Log file: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/vivado.log
+# Journal file: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.xpr
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+launch_runs impl_2
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream
+wait_on_run impl_2
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+launch_runs impl_2
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream
+wait_on_run impl_2
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+synth_design -rtl -name rtl_1
+launch_simulation
+source manager_tb.tcl
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+launch_runs impl_2
+wait_on_run impl_2
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+launch_runs impl_2
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_2
+launch_runs synth_2
+wait_on_run synth_2
+launch_runs impl_2
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim

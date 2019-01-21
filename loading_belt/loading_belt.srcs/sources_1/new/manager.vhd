@@ -12,9 +12,11 @@ entity manager is
     SW0: IN STD_LOGIC;  -- switch to start the belt
     SW1: IN STD_LOGIC;  -- switch to choose the product
     endstop: IN STD_LOGIC;      -- entrada GPIO en caso de construir maqueta. Sino un switch
+    bit_micro: IN STD_LOGIC;    -- entrada GPIO fin de trabajo del robot
     bit_robot: OUT STD_LOGIC;    -- salida GPIO
     LED: OUT STD_LOGIC;         -- led de placa
     servo: OUT STD_LOGIC     -- salida GPIO en caso de construir maqueta. Sino un LED
+    
   	);
 end manager;
 
@@ -27,7 +29,8 @@ architecture Behavioral of manager is
 	    	start: IN STD_LOGIC;       
 	    	SW0: IN STD_LOGIC;  
 	    	SW1: IN STD_LOGIC;
-	   	 	endstop: IN STD_LOGIC;      
+	   	 	endstop: IN STD_LOGIC; 
+	   	 	bit_micro: IN STD_LOGIC;     
 	   		bit_robot: OUT STD_LOGIC;    
 	    	LED: OUT STD_LOGIC;         
 	    	cinta : OUT STD_LOGIC       
@@ -72,6 +75,7 @@ begin
 		SW0 		=> SW0,
 		SW1 		=> SW1,
 		endstop 	=> endstop,
+		bit_micro   => bit_micro,
 		bit_robot 	=> bit_robot,
 		LED 		=> LED,
 		cinta 		=> move

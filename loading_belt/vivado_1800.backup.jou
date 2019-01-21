@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jan 21 08:14:39 2019
+# Process ID: 1800
+# Current directory: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13964 D:\Usuario\Desktop\Loading-Belt-VHDL-structure\loading_belt\loading_belt.xpr
+# Log file: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/vivado.log
+# Journal file: D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+config_webtalk -user on
+set_property -name {xsim.simulate.runtime} -value {150 ms} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {200 ms} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source manager_tb.tcl
+close_sim
+launch_simulation
+source manager_tb.tcl
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Usuario/Desktop/Loading-Belt-VHDL-structure/loading_belt/loading_belt.runs/impl_2/manager.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
